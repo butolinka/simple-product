@@ -1,0 +1,354 @@
+body {
+    margin: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    background-color: #FEFBF6;
+  }
+  
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  /* header */
+  
+  .header {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 #93a0d1;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover, .btnCont:hover {
+    background-color: #93a0d1;
+    opacity: 75%;
+  }
+  
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 25px;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+ 
+  .mainPage{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 70px;
+    padding-top: 70px;
+  }
+ .product{
+    margin-top: 100px;
+ }
+ .description{
+    margin-top: 100px;
+    text-align: center;
+ }
+ .btnCont, .btnOrder{
+    background-color: #919191;
+    font-family: 'Barlow Condensed', sans-serif;
+    width: 180px;
+    height: 50px;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 15px;
+ }
+ .order{
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+ }
+ .aboutUs{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 75px;
+    padding-bottom: 45px;
+    padding-top: 45px;
+ }
+  .projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+  }
+  .process{
+    display: flex;    
+    background-color: #fff;
+    width: 100%;
+    justify-content: space-evenly;
+    box-shadow: 1px 1px 4px 0 #93a0d1;
+  }
+  .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .prodCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+.products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.prodHead{
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+del{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+ins{
+    font-size: 30px;
+    text-decoration: none;
+    color: red;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 105px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #93a0d1;
+    width: 300px;
+    padding: 15px;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+input, textarea{
+    width: 180px;
+}
+/*products' cards*/
+  .flip-card{
+    width:300px;
+    height:300px;
+    background:transparent;
+    perspective:600px;
+    margin: 5px;
+  }
+  
+  .flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  
+  .flip-card:hover .flip-card-inner{
+    transform:rotateY(180deg);
+  }
+  
+  .flip-card-back , .flip-card-front{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .flip-card-front{
+    background-color: #919191;
+    color: #fff;
+  }
+  
+  .flip-card-back{
+     background-color: #93a0d1;
+    color: black;
+    transform:rotateY(180deg)
+  }
+
+  .footer{
+    position: fixed;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #919191;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.iconsCont{ 
+    display: flex;
+    justify-content: space-evenly;
+}
+.icons a{
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 10px;
+    color: #f4f4f4;
+}
+
+.company-name{
+    font-size: 15px;
+    margin-top: 10px;
+}
+.icon{
+    margin: 3px;
+}
+
+
+  
+  @media (min-width: 48em) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
+  @media all and (max-width: 800px){
+    .mainPage{
+        display: flex;
+        flex-direction: column;
+    }
+    .process{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .flip-card{
+        justify-content: center;
+    }
+    .item{
+        width: 150px;
+    }
+  }
+  
